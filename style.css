@@ -1,0 +1,299 @@
+/* Geral */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; /* Cor do texto padrão para a página */
+    display: flex; /* Torna o body um container flex */
+    flex-direction: column; /* Organiza os itens (header, main, footer) em coluna */
+    min-height: 100vh; 
+}
+
+#background-video {
+    position: fixed; /* Fixa o vídeo na tela */
+    right: 0;
+    bottom: 0;
+    min-width: 100%; /* Garante que o vídeo cubra a largura mínima da tela */
+    min-height: 100%; /* Garante que o vídeo cubra a altura mínima da tela */
+    width: auto;
+    height: auto;
+    z-index: -1; /* Coloca o vídeo atrás de todo o conteúdo da página */
+    background-size: cover; /* Simula o comportamento de cover para a imagem de fundo */
+    background-position: center center;
+    background-repeat: no-repeat;
+    object-fit: cover; /* Garante que o vídeo preencha o container sem distorcer */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+main {
+    flex-grow: 1; /* Faz o conteúdo principal ocupar todo o espaço disponível, empurrando o footer */
+}
+
+/* Cabeçalho */
+header {
+    color: #fff;
+    padding: 15px 0;
+}
+
+header .container {
+    display: flex; /* Torna o container um flex container */
+    align-items: center; /* Alinha verticalmente os itens */
+}
+
+header h1 {
+    text-align: center; /* Remova se não quiser centralizar */
+    flex-grow: 1; /* Faz o título ocupar o máximo de espaço possível */
+    margin: 0;
+    font-size: 40px;
+}
+
+header nav {
+    margin-left: auto; /* Isso empurra a nav para a direita */
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+    padding: 8px 12px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+header nav a:first-child {
+    margin-left: 0; /* Garante que o primeiro link não tenha margem esquerda extra */
+}
+
+/* Seções */
+section {
+    padding: 50px 0;
+}
+
+#sobre {
+    background-color: #f4f4f4;
+}
+
+#textoApresentacao h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+#apresentacao .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#textoApresentacao {
+    flex-grow: 1;
+    margin-right: 20px;
+    text-align: center;
+}
+
+#apresentacao img {
+    max-width: 350px;
+    max-height: auto;
+    height: auto;
+    margin-left: 0;
+}
+
+#curriculo {
+    background-color: #f8f0f0; /* Fundo claro para o conteúdo do currículo */
+    color: #272727; /* Cor de texto escura para contraste */
+    padding: 15px 30px; /* Espaçamento interno superior e inferior */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-top: 20px; /* Margem superior para separar do cabeçalho */
+    margin-bottom: 20px; /* Margem inferior para separar do rodapé */
+    text-align: justify;
+}
+
+#curriculo h1 { 
+    text-align: center;
+    font-size: 2.8em; /* Tamanho maior para o título principal da seção */
+    color: #08090a; /* Cor para o título do currículo */
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+#curriculo h2 { 
+    font-size: 1.6em;
+    color: #19191a; /* Cor para os subtítulos */
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.botao-download {
+    display: block; /* Garante que o link se comporte como um bloco para poder usar margin: auto */
+    width: fit-content; /* Faz com que a largura do bloco seja apenas o conteúdo do texto */
+    margin: 40px auto 0 auto;
+    background-color: #2831a7; 
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.botao-download:hover {
+    background-color: #1a2283; /* Cor mais escura ao passar o mouse */
+}
+
+#projetos {
+    color: #333;
+    padding: 5px 40px; /* Adicionando padding lateral aqui também */
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#projetos h1 {
+    text-align: center; /* Centraliza o título */
+    font-size: 3.2em; /* Tamanho grande para destaque */
+    color: #2831a7; /* Cor principal, como nos outros títulos principais */
+    margin-bottom: 90px; /* Espaço abaixo do título */
+    padding-bottom: 5px; /* Espaço interno inferior e linha de separação */
+    border-bottom: 1px solid #eee; /* Linha de separação */
+}
+
+.lista-projetos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards quebrem a linha */
+    gap: 30px; /* Espaço entre os cards */
+    justify-content: center; /* Centraliza os cards quando há espaço */
+}
+
+.projeto-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1; /* Permite que os cards cresçam */
+    min-width: 280px; /* Largura mínima para o card */
+    max-width: 350px; /* Largura máxima para o card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.projeto-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.projeto-card h3 {
+    font-size: 1.5em;
+    color: #2831a7;
+    margin-bottom: 10px;
+}
+
+.projeto-card .ver-detalhes {
+    display: inline-block;
+    background-color: #2831a7;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.projeto-card .ver-detalhes:hover {
+    background-color: #2831a7;
+}
+
+#detalhes-projeto {
+    background-color: #f4f4f4; /* Fundo claro para o quadro do conteúdo */
+    color: #202020; /* Cor do texto dentro do quadro */
+    padding: 30px 40px; /* Espaçamento interno (topo/base e laterais) */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar o quadro */
+    margin-top: 20px; /* Margem superior para separar do cabeçalho */
+    margin-bottom: 20px; /* Margem inferior para separar do rodapé */
+}
+
+/* Estilos para o título principal (H1) dentro da seção de detalhes */
+#detalhes-projeto h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #2831a7; /* Mantendo a cor azul que você está usando */
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #eee;
+}
+
+/* Estilos para subtítulos (H2) dentro da seção de detalhes */
+#detalhes-projeto h2 {
+    color: #2831a7; /* Mantendo a cor azul */
+    margin-top: 30px; /* Espaçamento acima para separar seções de texto */
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+#detalhes-projeto ul {
+    list-style: disc; /* Marcadores de lista */
+    margin-left: 20px; /* Espaçamento para os marcadores */
+    margin-bottom: 20px;
+}
+
+#detalhes-projeto ul li {
+    margin-bottom: 8px;
+}
+
+.links-projeto {
+    text-align: center; /* Centraliza os botões */
+    margin-top: 40px;
+}
+
+.links-projeto a { /* Aplica a links dentro de .links-projeto */
+    display: inline-block;
+    background-color: #2831a7; /* Cor do botão */
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px; /* Espaço entre os botões se houver mais de um */
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.links-projeto a:hover {
+    background-color: #1a2283; /* Cor mais escura ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+footer .container {
+    display: flex; /* Torna o container um flex container */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    gap: 20px; /* Adiciona um espaçamento entre os ícones */
+}
+
+footer .container img {
+    width: 40px; /* Diminui a largura dos ícones */
+    height: 40px; /* Diminui a altura dos ícones */
+}
