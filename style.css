@@ -1,4 +1,11 @@
 /* Geral */
+html {
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura/altura do elemento */
+}
+*, *::before, *::after {
+    box-sizing: inherit; /* Aplica o box-sizing a todos os elementos */
+}
+
 body {
     font-family: sans-serif;
     margin: 0;
@@ -31,7 +38,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px; /* Padding padrão para desktop */
 }
 
 main {
@@ -50,7 +57,7 @@ header .container {
 }
 
 header h1 {
-    text-align: center; /* Remova se não quiser centralizar */
+    text-align: center;
     flex-grow: 1; /* Faz o título ocupar o máximo de espaço possível */
     margin: 0;
     font-size: 40px;
@@ -100,7 +107,7 @@ section {
 }
 
 #apresentacao img {
-    max-width: 350px;
+    max-width: 350px; /* Largura máxima para desktop */
     max-height: auto;
     height: auto;
     margin-left: 0;
@@ -152,7 +159,7 @@ section {
 
 #projetos {
     color: #333;
-    padding: 5px 40px; /* Adicionando padding lateral aqui também */
+    padding: 5px 40px; /* Adicionando padding lateral aqui também para desktop */
     border-radius: 8px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -181,7 +188,7 @@ section {
     padding: 20px;
     text-align: center;
     flex: 1; /* Permite que os cards cresçam */
-    min-width: 280px; /* Largura mínima para o card */
+    min-width: 280px; /* Largura mínima para o card no desktop */
     max-width: 350px; /* Largura máxima para o card */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -222,7 +229,7 @@ section {
 #detalhes-projeto {
     background-color: #f4f4f4; /* Fundo claro para o quadro do conteúdo */
     color: #202020; /* Cor do texto dentro do quadro */
-    padding: 30px 40px; /* Espaçamento interno (topo/base e laterais) */
+    padding: 30px 40px; /* Espaçamento interno (topo/base e laterais) para desktop */
     border-radius: 8px; /* Cantos arredondados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar o quadro */
     margin-top: 20px; /* Margem superior para separar do cabeçalho */
@@ -296,4 +303,152 @@ footer .container {
 footer .container img {
     width: 40px; /* Diminui a largura dos ícones */
     height: 40px; /* Diminui a altura dos ícones */
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 0 15px; /* Reduz o padding lateral para 15px */
+    }
+
+    header .container {
+        flex-direction: column; /* Empilha o título e a navegação verticalmente */
+        align-items: center; /* Centraliza os itens empilhados */
+        text-align: center; /* Centraliza o texto do título */
+    }
+
+    header h1 {
+        font-size: 2.5em; /* Diminui o tamanho do título do cabeçalho */
+        margin-bottom: 10px; /* Espaço abaixo do título */
+    }
+
+    header nav {
+        margin-left: 0; /* Remove a margem automática que empurrava para a direita */
+        width: 100%; /* Faz a navegação ocupar a largura total */
+        display: flex; /* Mantém como flexbox para os links */
+        justify-content: center; /* Centraliza os links dentro da nav */
+        flex-wrap: wrap; /* Permite que os links quebrem a linha se não couberem */
+    }
+
+    header nav a {
+        margin: 5px 10px; /* Ajusta margens entre os links em tela pequena */
+        padding: 6px 10px; /* Ajusta padding dos links */
+    }
+
+    #apresentacao .container {
+        flex-direction: column; /* Empilha o texto e a imagem verticalmente */
+        text-align: center; /* Centraliza o texto quando empilhado */
+    }
+
+    #textoApresentacao {
+        margin-right: 0; /* Remove a margem direita da imagem */
+        margin-bottom: 30px; /* Adiciona margem abaixo do texto empilhado */
+    }
+
+    #textoApresentacao h1 {
+        font-size: 2em; /* Tamanho de fonte menor para o H1 da seção de apresentação */
+        word-break: break-word; /* NOVO: Garante que palavras longas em títulos não transbordem */
+    }
+
+    #textoApresentacao p {
+        word-break: break-word; /* NOVO: Garante que palavras longas em parágrafos não transbordem */
+    }
+
+    #apresentacao img {
+        max-width: 90%; /* Permite que a imagem se ajuste à largura do contêiner */
+        height: auto;
+    }
+
+    .curriculo-conteudo { 
+        display: flex; /* Garante que é um container flex */
+        flex-direction: column; /* Empilha as colunas de informações no currículo */
+        gap: 20px; /* Espaço entre as colunas empilhadas */
+    }
+
+    #curriculo {
+        padding: 20px 20px; /* Reduz o padding interno para telas menores */
+    }
+
+    #curriculo h1 {
+        font-size: 2em; /* Diminui o tamanho do título principal do currículo */
+    }
+
+    #curriculo h2 {
+        font-size: 1.4em; /* Diminui os subtítulos do currículo */
+    }
+
+    #projetos,
+    #detalhes-projeto {
+        padding: 20px 15px; /* Reduz o padding lateral para telas menores */
+    }
+
+    #projetos h1,
+    #detalhes-projeto h1 {
+        font-size: 2.5em; /* Diminui o tamanho do título principal da seção */
+        margin-bottom: 40px; /* Ajusta a margem abaixo do título */
+    }
+
+    .lista-projetos {
+        gap: 20px; /* Reduz o gap entre os cards */
+    }
+
+    .projeto-card {
+        min-width: 100%; /* Faz o card ocupar 100% da largura disponível para evitar overflow */
+        max-width: 100%; /* Garante que não exceda o container */
+    }
+
+    .links-projeto a {
+        padding: 10px 20px; /* Ajusta padding dos botões */
+        margin: 5px; /* Ajusta margem entre os botões */
+    }
+}
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 0.9em; /* Levemente menor o tamanho base da fonte */
+    }
+
+    header h1 {
+        font-size: 1.8em; /* Diminui ainda mais o título do cabeçalho */
+    }
+
+    #apresentacao h1 {
+        font-size: 1.8em; /* Tamanho de H1 ainda menor para apresentação em telas muito pequenas */
+    }
+
+    #projetos h1,
+    #detalhes-projeto h1 {
+        font-size: 2em; /* Diminui o tamanho do título principal para telas muito pequenas */
+        margin-bottom: 30px;
+    }
+
+    #curriculo h1 {
+        font-size: 1.6em;
+    }
+    #curriculo h2 {
+        font-size: 1.1em;
+    }
+
+    #projetos,
+    #detalhes-projeto,
+    #curriculo {
+        padding: 15px 10px;
+    }
+
+    .botao-download {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    footer .container {
+        flex-wrap: wrap; /* Permite que os ícones do rodapé quebrem linha */
+        gap: 10px; /* Reduz o espaçamento entre ícones */
+    }
+
+    header nav a {
+        display: block; /* Força os links da navegação a empilharem em telas muito pequenas */
+        margin-left: 0; /* Remove margem lateral */
+        margin-right: 0; /* Remove margem lateral */
+    }
 }
