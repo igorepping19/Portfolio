@@ -187,7 +187,7 @@ section {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-    flex: 1; /* Permite que os cards cresçam */
+    flex: 0 1 calc(33.33% - 20px); /* Permite que os cards cresçam */
     min-width: 280px; /* Largura mínima para o card no desktop */
     max-width: 350px; /* Largura máxima para o card */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -400,6 +400,38 @@ footer .container img {
     .links-projeto a {
         padding: 10px 20px; /* Ajusta padding dos botões */
         margin: 5px; /* Ajusta margem entre os botões */
+    }
+}
+
+.imagens-do-projeto {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha */
+    justify-content: center; /* Centraliza as imagens na linha */
+    gap: 20px; /* Espaço entre as imagens */
+    margin-top: 30px; /* Margem superior para separar do conteúdo acima */
+    margin-bottom: 30px; /* Margem inferior para separar do conteúdo abaixo */
+}
+
+.imagens-do-projeto img {
+    max-width: 100%; /* Garante que a imagem não transborde seu container */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Cantos levemente arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+    object-fit: cover; /* Garante que a imagem preencha seu espaço sem distorcer (se você quiser definir uma altura fixa) */
+    flex: 1 1 300px; /* Permite que cada imagem tenha uma base de 300px e se ajuste */
+}
+
+@media (max-width: 768px) {
+
+    .imagens-do-projeto {
+        flex-direction: column; /* Empilha as imagens verticalmente em telas menores */
+        align-items: center; /* Centraliza as imagens empilhadas */
+        gap: 15px; /* Reduz o espaço entre as imagens empilhadas */
+    }
+
+    .imagens-do-projeto img {
+        width: 90%; /* Faz as imagens ocuparem 90% da largura em telas menores */
+        flex: 1 1 auto; /* Remove a flex-basis fixa para mobile */
     }
 }
 
