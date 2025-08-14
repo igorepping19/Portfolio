@@ -1,17 +1,40 @@
 body {
-    background-color: rgb(7, 6, 6);
+    background-color: rgb(66, 66, 66);
 }
 
-h1,
-h2 {
-    color: white;
-    justify-content: center;
+header {
+    height: 70px; /* Define a altura do cabeçalho */
+    display: flex; /*alinha os itens lado a lado*/
+    justify-content: space-between; /* juntamente com o comando acima, faz com que o primeiro item fique na ponta esquerda e o ultimo na ponta direita, o restante fica centralizado separadamente*/
 }
-img {
-     position: absolute;
-     top: 0;
-     right: 0;
-     width: 500px;  /* Define a largura da imagem */
-     height: 660px; /* Define a altura da imagem */
-     
+
+.minhaLogo img{
+    width: 60px; /* largura da imagem */
+    height: 60px; /* altura da imagem */
 }
+
+.menu {
+    background-color: #1a1a1a; /* Fundo escuro */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 10px; /* Espaço interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave, opcional */
+}
+
+.menu ul {
+    list-style: none; /* Remove as bolinhas da lista */
+    display: flex; /*alinha os itens lado a lado*/
+    gap: 15px; /* Adiciona um espaço entre os itens do menu */
+}
+
+.menu li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-family: Arial, sans-serif;
+}
+
+.linguagem {
+    width: 40px; /*largura do botao*/
+    height: 40px; /*altura do botão*/
+    background-color: #1a1a1a; /*cor do fundo do botão*/
+    color: white; /*cor da letra*/
+    border-radius: 5px; /* Bordas arredondadas */
+}   
