@@ -8,22 +8,52 @@
     <link rel="stylesheet" href="Css/style.css">
 </head>
 <body>
+
     <header>
-        <div class="minhaLogo">
-            <img src="Imagens/Logo1.jpeg" alt="">
+        <div class="container">
+            <div class="minhaLogo">
+                <img src="Imagens/Logo1.jpeg" alt="Imagem Logo">
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contatos">Contatos</a></li>
+                </ul>
+            </nav>
+            <select class="linguagem">
+                <option value="pt">PT</option>
+                <option value="en">EN</option>
+            </select>
         </div>
-        <nav class="menu">
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contatos">Contatos</a></li>
-            </ul>
-        </nav>
-        <select class="linguagem">
-            <option value="pt">PT</option>
-            <option value="en">EN</option>
-        </select>
     </header>
+
+    <main>
+        <section id="inicio">
+            <div class="container">
+                <div class="minhaFoto">
+                    <img src="Imagens/Foto minha.jpeg" alt="Foto de Perfil">
+                </div>
+                <div class="apresentacao">
+                    <h1>Olá, eu sou Igor Epping!</h1>
+                    <h2>SOU DESENVOLVEDOR FRONT-END</h2>
+                </div>
+                <div class="botoes">
+                    <a href="Doc/Curriculo Dev Igor Epping.pdf" target="_blank" class="curriculo">Baixar CV</a>
+                    <a href="https://github.com/igorepping19" target="_blank" class="github"><img src="Imagens/Icons/github-icon.png" alt="Ícone do GitHub"></a>
+                    <a href="https://www.linkedin.com/in/igor-epping-526a89247" target="_blank" class="linkedin"><img src="Imagens/Icons/linkedin-icon.png" alt="Ícone do LinkedIn"></a>
+                    <a href="https://wa.me/5549991897796" target="_blank" class="whatsapp"><img src="Imagens/Icons/whatsapp-icon.png" alt="Ícone do WhatsApp"></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Igor Epping. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
 </body>
 </html>

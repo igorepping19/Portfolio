@@ -2,7 +2,7 @@ body {
     background-color: rgb(66, 66, 66);
 }
 
-header {
+header .container  {
     height: 70px; /* Define a altura do cabeçalho */
     display: flex; /*alinha os itens lado a lado*/
     justify-content: space-between; /* juntamente com o comando acima, faz com que o primeiro item fique na ponta esquerda e o ultimo na ponta direita, o restante fica centralizado separadamente*/
@@ -38,3 +38,8 @@ header {
     color: white; /*cor da letra*/
     border-radius: 5px; /* Bordas arredondadas */
 }   
+
+.minhaFoto img{
+    width: 450px; /* largura da imagem */
+    height: 600px; /* altura da imagem */
+}
