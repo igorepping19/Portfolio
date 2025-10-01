@@ -31,7 +31,7 @@ header .container  {
     font-family: Arial, sans-serif;
 }
 
-.linguagem {
+.idioma {
     width: 40px; /*largura do botao*/
     height: 40px; /*altura do botão*/
     background-color: #1a1a1a; /*cor do fundo do botão*/
@@ -39,7 +39,39 @@ header .container  {
     border-radius: 5px; /* Bordas arredondadas */
 }   
 
-.minhaFoto img{
-    width: 450px; /* largura da imagem */
-    height: 600px; /* altura da imagem */
+#inicio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 20px 0px;
 }
+
+#inicio .minhaFoto img{
+    width: 300px; /* largura da imagem */
+    height: 300px; /* altura da imagem */
+    border-radius: 50%;
+
+}
+
+#inicio .curriculo {
+    text-decoration: none;
+    background-color: transparent;
+    border: 3px solid #1a1a1a;
+    border-radius: 30px;
+    height: 40px;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1a1a1a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /*transação do efeito hover*/
+}
+
+#inicio .curriculo:hover {
+    transform: scale(1.05); /* Faz o botão crescer 5% */
+    box-shadow: 0 0 15px rgba(0, 198, 255, 0.6); /* Adiciona uma sombra suave */
+}
+
+
+
+
